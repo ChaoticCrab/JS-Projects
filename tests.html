@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence, Selection, Loops</title>
+</head>
+<body>
+    <h1>Sequence, Selection, Loops</h1>
+
+    <script>
+        var myString = "pooooookie and patooooootie";
+        console.log(myString);
+        var myUpperString = myString.toUpperCase();
+        console.log(myUpperString);
+        var andLocation = myString.search('and');
+        console.log(andLocation);
+        var specialWord = myString.substr(andLocation, 3);
+        console.log(specialWord);
+        var newString = myString.replace('and', specialWord);
+        console.log(newString);
+
+        var myString = "I really crave some";
+        var foods = ['cheese', 'cake', 'cheesecake', 'cake with cheese'];
+
+        for (var food of foods){
+            console.log(`${myString} ${food}`);
+        }
+
+        for (var i=0; i<foods.length; i++){
+            if (i%2 === 0){
+                console.log(`${myString} ${foods[i].toUpperCase()}`);
+            } else {
+                console.log(`${myString} ${foods[i]}`);
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
