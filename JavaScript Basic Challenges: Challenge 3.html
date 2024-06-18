@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic Challenges: Challenge 3</title>
+</head>
+<body>
+    <h1>Challenge 3</h1>
+
+    <script>
+
+        var myColor = prompt("Enter a Color")
+
+        var primaryColors = ['red', 'blue', 'yellow'];
+        var secondaryColors = ['orange', 'green', 'purple']
+
+        // switch(myColor){
+        //     case myColor == "red" || myColor == "blue" || myColor == "yellow": console.log(`You picked a primary color: ${myColor}`); break;
+        //     case "orange" || "green" || "purple": console.log(`You picked a secondary color: ${myColor}`); break;
+        //     default: console.log("Congratulations, that is certainly not a color!");
+        // }
+
+        if (primaryColors.includes(myColor)) {
+            console.log(`You picked a primary color: ${myColor}`);
+        } else if (secondaryColors.includes(myColor)) {
+            console.log(`You picked a secondary color: ${myColor}`);
+        } else {
+            console.log("Congratulations, that is certainly not a color!");
+        }
+        
+    </script>
+</body>
+</html>
