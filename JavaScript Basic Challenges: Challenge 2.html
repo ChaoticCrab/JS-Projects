@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic Challenges: Challenge 2</title>
+</head>
+<body>
+    
+    <h1>JavaScript Basic Challenges</h1>
+    <h2>Challenge 2</h2>
+
+    <script>
+
+        var myNum = prompt("Please enter an integer");
+        switch(true){
+            case myNum < 10: console.log("You entered a number smaller than 10"); break;
+            case myNum > 10: console.log("You entered a big number"); break;
+            default: console.log("ERROR: you didn't enter a number!"); break;
+        }
+
+        if (myNum < 10) {
+            for (var i=0; i < 10; i++){
+                if (i == myNum){
+                    console.log(`Here is a ${i} <-- this is your number :)`)
+                } else {
+                    console.log(`Here is a ${i}`)
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
