@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic Challenges: Challenge 5</title>
+</head>
+<body>
+    
+    <h1>Challenge 5</h1>
+    <p>Here is a paragraph</p>
+    <p>More paragraphs</p>
+    <p>Pew Pew Pew Pew</p>
+    <div id="special">
+        <p>The first div-paragraph</p>
+    </div>
+    <button>Turn Green Dammit!</button>
+    <button>Remove Paragraph!</button>
+
+    <script>
+
+        var button = document.querySelector('button');
+        var para = document.querySelectorAll('p')
+
+        button.addEventListener('click', function(){
+            for (var i=0; i<para.length; i++){
+                para[i].style.color = "green";
+        }});
+
+        var myDiv = document.querySelector('div');
+        button.addEventListener('click', function(){
+            var newPara = document.createElement('p');
+            var paraText = document.createTextNode('This is new!');
+            newPara.appendChild(paraText);
+            myDiv.appendChild(newPara);
+        });
+    </script>
+
+</body>
+</html>
