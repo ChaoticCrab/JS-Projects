@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic Challenges: Challenge 6</title>
+</head>
+<body>
+    
+    <h1>Challenge 6</h1>
+    <div id="special">
+        <p>The first div-paragraph</p>
+    </div>
+    <button>Add a paragraph</button>
+    <button>Remove Paragraph!</button>
+
+    <script>
+
+        var myDiv = document.querySelector('div');
+        var buttonAdd = document.querySelectorAll('button')[0];
+        var buttonRmv = document.querySelectorAll('button')[1];
+        var numOfParas = 1;
+    
+
+        buttonAdd.addEventListener('click', function(){
+            numOfParas++;
+            var newPara = document.createElement('p');
+            var paraText = document.createTextNode(`This is paragraph number ${numOfParas}!`);
+            newPara.appendChild(paraText);
+            myDiv.appendChild(newPara);
+        });
+
+        buttonRmv.addEventListener('click', function(){
+            if (numOfParas>1){
+                myDiv.removeChild(myDiv.children[numOfParas-1]);
+                numOfParas--;
+            }
+            else {
+                alert("don't delete the last paragraph")
+            }
+        });
+
+    </script>
+
+</body>
+</html>
