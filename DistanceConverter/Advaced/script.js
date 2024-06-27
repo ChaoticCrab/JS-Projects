@@ -27,13 +27,13 @@
         if (distance){
             if (convertType === "miles") {
                 let converted = (distance * 1.609344).toFixed(3);
-                answer.innerHTML = `${distance} miles converts to ${converted} kilometers`;
+                answerDiv.innerHTML = `${distance} miles converts to ${converted} kilometers`;
             } else {
                 let converted = (distance * 0.621371192).toFixed(3);
-                answer.innerHTML = `${distance} kilometers converts to ${converted} miles`;
+                answerDiv.innerHTML = `${distance} kilometers converts to ${converted} miles`;
             };
         } else {
-            answer.innerHTML = "<h2>Please provide a number</h2>";
+            answerDiv.innerHTML = "<h2>Please provide a number</h2>";
         };
     });
 
