@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Examples</title>
+    <style>
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Query Examples</h1>
+    <div id="special">
+        <p class="someclass">Here is a paragraph</p>
+        <p>Here is another one</p>
+        <p>And a third paragraph</p>
+    </div>
+
+    <script>
+        var myText = document.querySelector('#special .someclass'); //css-syntax - only ever returns the first element found
+        myText.style.color = "blue"; 
+    </script>  -->
+    
+    <!-- <h1>Query Examples</h1>
+    <div>
+        <p>This is the first paragraph of the page</p>
+    </div>
+
+    <script>
+        var myTag = document.createElement('p');
+        var myText = document.createTextNode("Here is a new paragraph");
+        myTag.appendChild(myText);
+        var myDiv = document.querySelector('div');
+        myDiv.appendChild(myTag);
+    </script> -->
+
+     <h1>DOM examples</h1>
+     <div id="special">
+        <p>Here is one paragraph</p>
+        <p>Here is another one</p>
+        <p>Here is the thid one</p>
+     </div>
+
+     <!-- <script>
+        var myText = document.querySelectorAll('#special p');
+        for (var i=0; i<myText.length; i++){
+             myText[i].style.color = "blue";
+        }
+     </script> -->
+
+     <!-- <script>
+        var myDiv = document.getElementById('special');
+        myDiv.innerHTML = "<p>Here is a new paragraph</p>";
+        // it overwrites the parameters above, with the new stuff!
+        document.querySelector('#special').innerHTML = "<p>Here is a yet another paragraph</p>";
+     </script> -->
+
+     <script>
+
+        var firstPara = document.querySelector('p');
+        firstPara.className = "blue";
+     </script>
+
+
+</body>
+</html>

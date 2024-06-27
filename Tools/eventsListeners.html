@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript</title>
+</head>
+<body>
+
+    <h1>JavaScript Events</h1>
+
+    <!-- //pushing buttons!! -->
+    <button>Don't press me!</button>
+
+    <!-- //following links!! -->
+    <a href="http://google.com">Link to Google</a>
+
+    <!-- //submit events (no clicking)!! -->
+    <form method="get">
+        <label>Your Name: <input type="text" name="name"></label>
+        <input type="sumbit">
+    </form>
+
+    <script>
+        //pushing buttons!!
+
+        var button = document.querySelector('button');
+
+        //button.addEventListener('click', function(){alert("I told you not to press me!");});
+
+        button.addEventListener('click', function(event){
+            event.target.style.backgroundColor = "red";
+            alert("I told you not to press me!");
+        })
+
+        //following links!!
+        var link = document.querySelector('a');
+        link.addEventListener('click', function(event){
+            event.preventDefault();
+            alert("Don't go to Google!");
+        });
+
+        //submit events / inputs
+        var myForm = document.querySelector('form');
+        
+        myForm.addEventListener('submit', function(event){
+            event.preventDefault();
+            var FormData = document.querySelector('input').value;
+            alert(formData);
+        })
+
+    </script>
+    
+</body>
+</html>

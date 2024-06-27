@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions in JS</h1>
+    
+    <script>
+        //console.log(Math.random())
+
+        function randomInt (min, max){
+            // var numOfValues = max - min + 1;
+            // var randomNum = Math.random();
+            // var randomVal = randomNum * numOfValues;
+            // var roundedRandomVal = Math.floor(randomVal); //.floor rounds down and .ceil rounds up
+            // var finalNum = min + roundedRandomVal;
+            // console.log(finalNum);
+
+
+            //creating a random integer within min and max
+            return Math.floor((max-min+1)*Math.random())+min;
+        }
+
+        console.log(randomInt(3,6))
+
+        //anonymus nameless functions: for maybe one-time uses
+        var greeting = function(){
+            console.log("Hello from the function!");
+        }
+        greeting()
+
+
+        //Arrow functions, in comparison:
+
+        //named function
+        function capitalizeFunction(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+
+        //anonymus function
+        var capitalizeExpression = function(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+
+        //arrowFunction
+        var capitalizeArrow = anyString => anyString.toUpperCase()
+
+    </script>
+</body>
+</html>
